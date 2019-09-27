@@ -23,5 +23,7 @@
         android:id="@+id/btn_js_bridge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="JSBridge例子" />
+        android:text="JSBridge官方例子" />
+
+
 </LinearLayout>

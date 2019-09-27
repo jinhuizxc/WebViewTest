@@ -19,6 +19,10 @@ import com.github.lzyzsd.jsbridge.CallBackFunction;
 import com.github.lzyzsd.jsbridge.DefaultHandler;
 import com.google.gson.Gson;
 
+/**
+ * Java 和 js互通框架
+ * https://github.com/Tamicer/JsBridge-Android
+ */
 public class JsBridgeActivity extends Activity implements OnClickListener {
 
 	private final String TAG = "MainActivity";
@@ -81,8 +85,10 @@ public class JsBridgeActivity extends Activity implements OnClickListener {
 			}
 		});
 
+		//加载本地网页
 		webView.loadUrl("file:///android_asset/js_bridge.html");
 
+		//必须和js同名函数，注册具体执行函数，类似java实现类。
 		webView.registerHandler("submitFromWeb", new BridgeHandler() {
 
 			@Override

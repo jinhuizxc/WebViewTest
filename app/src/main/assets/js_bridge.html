@@ -45,7 +45,7 @@
             var str1 = document.getElementById("text1").value;
             var str2 = document.getElementById("text2").value;
 
-            //send message to native
+            // 发送消息给java代码
             var data = {id: 1, content: "这是一个图片 <img src=\"a.png\"/> test\r\nhahaha"};
             window.WebViewJavascriptBridge.send(
                 data
@@ -60,7 +60,7 @@
             var str1 = document.getElementById("text1").value;
             var str2 = document.getElementById("text2").value;
 
-            //call native method
+            //调用本地java方法
             window.WebViewJavascriptBridge.callHandler(
                 'submitFromWeb'
                 , {'param': '中文测试'}
@@ -72,7 +72,7 @@
 
         function bridgeLog(logContent) {
             document.getElementById("show").innerHTML = logContent;
-        }
+        } //注册事件监听
 
         function connectWebViewJavascriptBridge(callback) {
             if (window.WebViewJavascriptBridge) {
@@ -87,7 +87,7 @@
                 );
             }
         }
-
+        //注册回调函数，第一次连接时调用 初始化函数
         connectWebViewJavascriptBridge(function(bridge) {
             bridge.init(function(message, responseCallback) {
                 console.log('JS got a message', message);
