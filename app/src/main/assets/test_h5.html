@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Android WebView 与 Javascript 交互</title>
+
+    <!--  <style>
+          body {background-color:#e6e6e6}
+
+    .rect{
+      color:white;
+      font-family:Verdana, Arial, Helvetica, sans-serif;
+      font-size:16px;
+      width:100px;
+      padding:6px;
+      background-color:#98bf21;
+      text-decoration:none;
+      text-align:center;
+      border:none;
+      cursor:pointer;
+    }
+
+    .inputStyle {font-size:16px;padding:6px}
+  </style>-->
+
+</head>
+
+
+<body>
+
+
+<script type="text/javascript">
+
+
+  // 获取位置
+ function d(){
+   var param = {
+	userid:"123",
+	// 成功回调
+	callBackSuccess:function(data){
+		alert("成功了！");
+	 },
+	// 失败回调
+	callBackFail:function(data){
+		alert("失败了！");
+	 }
+   }
+   // js调用android方法
+   // alert("失败了！");
+     window.action.getLocation(param);
+ }
+
+ function sendInfoToJava(){
+    //调用android程序中的方法，并传递参数
+    var name = document.getElementById("name_input").value;
+    window.action.showInfoFromJs(name);
+  }
+
+  //在android代码中调用此方法
+  function showInfoFromJava(msg){
+    alert("来自客户端的信息："+ msg);
+  }
+
+  function funFromjs(){
+    document.getElementById("helloweb").innerHTML="HelloWebView , i'm from js !";
+  }
+
+
+</script>
+
+<p>测试Android WebView 与 Javascript 交互</p>
+<!--<input id = "name_input" class = "inputStyle" type="text"/>-->
+<!--<a class = "rect" onclick="sendInfoToJava()">JS调用Java</a>-->
+
+<button type="button" onclick="d()" style="width: 200px; height:100px">
+    获取位置
+</button>
+<div id="helloweb"></div>
+
+
+</body>
+</html>
