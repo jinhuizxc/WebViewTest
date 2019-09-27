@@ -123,7 +123,7 @@ public class JavaScriptMethods {
         if(TextUtils.isEmpty(callback)){
             return;
         } else {
-            Log.e(TAG, "invokeJavaScript: " + callback);
+            Log.e(TAG, "callback方法测试: " + callback);
         }
         //调用js方法必须在主线程
         webView.post(new Runnable() {
