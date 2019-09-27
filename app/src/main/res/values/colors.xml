@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="transparent">#00000000</color>
+    <drawable name="transparent">@color/transparent</drawable>
+    <color name="btn_white">#eeffffff</color>
+    <color name="btn_light">#eed2d2d2</color>
+    <drawable name="line">#a2a2a2</drawable>
+    <color name="text_color">#1482fd</color>
+
 </resources>

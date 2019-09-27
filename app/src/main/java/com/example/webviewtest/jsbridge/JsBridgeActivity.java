@@ -25,7 +25,7 @@ import com.google.gson.Gson;
  */
 public class JsBridgeActivity extends Activity implements OnClickListener {
 
-	private final String TAG = "MainActivity";
+	private final String TAG = "BridgeWebViewActivity";
 
 	BridgeWebView webView;
 

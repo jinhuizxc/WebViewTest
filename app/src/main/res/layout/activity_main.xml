@@ -25,5 +25,11 @@
         android:layout_height="wrap_content"
         android:text="JSBridge官方例子" />
 
+    <Button
+        android:id="@+id/btn_bridge_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="H5和Android通信容器BridgeWebView的使用" />
+
 
 </LinearLayout>

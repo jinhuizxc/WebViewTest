@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.ActivityUtils;
+import com.example.webviewtest.bridgewebview.BridgeWebViewActivity;
 import com.example.webviewtest.h5.H5TestActivity;
 import com.example.webviewtest.jsbridge.JsBridgeActivity;
 import com.example.webviewtest.test.TestActivity;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnTest;
     @BindView(R.id.btn_js_bridge)
     Button btnJsBridge;
+    @BindView(R.id.btn_bridge_webview)
+    Button btnBridgeWebview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn, R.id.btn_test, R.id.btn_js_bridge})
+    @OnClick({R.id.btn, R.id.btn_test, R.id.btn_js_bridge, R.id.btn_bridge_webview})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn:
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_js_bridge:
                 ActivityUtils.startActivity(JsBridgeActivity.class);
+                break;
+            case R.id.btn_bridge_webview:
+                ActivityUtils.startActivity(BridgeWebViewActivity.class);
                 break;
         }
     }
